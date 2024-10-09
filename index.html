@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Şikayətlər və Təkliflər</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Şikayətlər və Təkliflər</h1>
+            <p>Bu platform vasitəsilə istənilən şikayət və ya təklifinizi yaza və dərhal paylaşa bilərsiniz. Hər kəs mesajları görə bilər.</p>
+        </header>
+
+        <form id="postForm">
+            <label for="name">Adınız:</label>
+            <input type="text" id="name" name="name" placeholder="Adınızı yazın" required>
+
+            <label for="message">Mesajınız:</label>
+            <textarea id="message" name="message" rows="3" placeholder="Mesajınızı yazın..." required></textarea>
+
+            <label for="hashtagsInput">Hashtaglar əlavə edin:</label>
+            <div class="hashtag-input-area">
+                <input type="text" id="hashtagsInput" placeholder="Hashtagınızı yazın (#ilə)">
+                <button type="button" id="addHashtagButton">+</button>
+            </div>
+            <ul id="hashtagList"></ul>
+
+            <label for="media">Şəkil və ya video yükləyin:</label>
+            <div id="dropArea">
+                <p>Şəkil və ya videonuzu buraya sürüşdürüb buraxa və ya aşağıdakı düymədən istifadə edə bilərsiniz.</p>
+                <input type="file" id="media" name="media" accept="image/*,video/*">
+            </div>
+
+            <button type="submit">Göndər</button>
+        </form>
+
+        <div id="posts">
+            <h2>Paylaşımlar</h2>
+            <div><button id="resetFilterButton">reset</button></div>
+            <div id="postList"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
